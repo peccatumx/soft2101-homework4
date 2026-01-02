@@ -248,4 +248,46 @@ Result:
 main now reflects the functionality from feature-2 (odd numbers).
 
 
+STEP M:
+
+Commands:
+git checkout main
+git pull --rebase origin main
+git merge feature-3
+
+During the merge, a conflict occurred in hmk1/Main.java.
+The conflict was resolved so that the main branch keeps the functionality of feature-3.
+
+Final version of the program on main:
+The program prints only the even numbers between the two input values:
+if (i % 2 == 0) { System.out.println(i); }
+
+Verification:
+javac hmk1/Main.java
+java -cp hmk1 Main
+
+Example input:
+3 8
+
+Program output:
+4
+6
+
+QUESTION:
+Differences between main and other branches (checked using git diff):
+
+- main vs feature-1:
+  feature-1 prints all numbers between the two inputs.
+  main prints only even numbers.
+
+- main vs feature-2:
+  feature-2 prints only odd numbers.
+  main prints only even numbers.
+
+- main vs feature-3:
+  No differences. The main branch reflects the functionality of feature-3.
+
+
+
+
 
