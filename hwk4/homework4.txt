@@ -215,3 +215,35 @@ What are all the commits you’ve made on the feature-2 branch?
 Answer:
 5e476d4 satisfying requirement change two
 
+
+STEP K:
+
+Commands:
+git checkout feature-3
+nano hmk1/Main.java
+javac hmk1/Main.java
+java -cp hmk1 Main
+
+Program Output:
+3 8
+4
+6
+
+git add hmk1/Main.java
+git commit -m "satisfying requirement change three"
+git push origin feature-3
+
+Explanation:
+The program was modified on feature-3 to print only the even numbers in the range.
+
+
+STEP L:
+
+Commands:
+git checkout main
+git merge feature-2
+git push origin main
+
+Result:
+main now reflects the functionality from feature-2 (odd numbers).
+
