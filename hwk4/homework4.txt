@@ -289,5 +289,27 @@ Differences between main and other branches (checked using git diff):
 
 
 
+STEP N:
+
+Commands:
+git push -u origin main
+git push -u origin feature-1
+git push -u origin feature-2
+git push -u origin feature-3
+
+Result:
+feature-2 was already up to date.
+main, feature-1, and feature-3 were rejected at first (fetch first / non-fast-forward)
+because their remote branches were ahead. This was fixed by integrating remote changes:
+
+git pull origin main
+git pull --rebase origin feature-1
+git pull --rebase origin feature-3
+
+After updating the branches, they were pushed to origin successfully.
+
+
+
+
 
 
