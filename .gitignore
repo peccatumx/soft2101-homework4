@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Java
+*.class
+*.log
+*.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Build directories
+target/
+bin/
+out/
+
+# Backup files
+*~
+
