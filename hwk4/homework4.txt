@@ -1,1 +1,27 @@
+STEP F:
+
+Commands:
+git checkout feature-1
+mkdir -p hmk1
+cd hmk1
+nano Main.java
+javac Main.java
+java Main
+
+Program Output:
+3 8
+4
+5
+6
+7
+
+Commit:
+git add hmk1/Main.java
+git commit -m "satisfying requirement one"
+git push origin feature-1
+
+Explanation:
+A new Java program was created in a separate branch (feature-1) to satisfy the first project requirement.
+The program was successfully compiled and executed, and its output was verified.
+The change was committed and pushed to the remote feature branch.
 
