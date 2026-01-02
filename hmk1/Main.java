@@ -11,10 +11,10 @@ public class Main {
         int end = Math.max(a, b);
 
         for (int i = start + 1; i < end; i++) {
-	    if (i % 2 != 0) {
-        	System.out.println(i);
-    }
-}
+	    if (i % 2 == 0) {
+        System.out.println(i);
+   	 }
+	}
 
 
         sc.close();
