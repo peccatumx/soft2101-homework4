@@ -143,3 +143,109 @@ What files (and sub-directories, if any) are listed in your hmk1 directory on th
 
 Answer:
 None. The hmk1 directory does not exist on the main branch.
+
+
+STEP G:
+
+Command:
+git checkout main
+git pull
+
+Result:
+The feature-1 branch was successfully merged into main.
+The main branch now contains hmk1/Main.java and the STEP F documentation.
+
+
+STEP H:
+
+Commands:
+git checkout main
+git pull
+git checkout -b feature-2
+git branch
+
+Output:
+* feature-2
+  feature-1
+  main
+
+
+STEP I: Create feature-3 branch from main
+
+Commands:
+git checkout main
+git checkout -b feature-3
+git branch
+git checkout main
+
+Output:
+* feature-3
+  feature-2
+  feature-1
+  main
+
+Explanation:
+The feature-3 branch was created from the main branch using the command
+`git checkout -b feature-3`. After creation, the working branch was switched
+back to main in order to continue development safely.
+
+
+STEP J:
+
+Commands:
+git checkout feature-2
+nano hmk1/Main.java
+javac hmk1/Main.java
+java -cp hmk1 Main
+git add hmk1/Main.java
+git commit -m "satisfying requirement change two"
+git push origin feature-2
+
+Program Output:
+5
+7
+
+Explanation:
+The existing method was modified so that it prints only the odd numbers in the given range.
+The change was committed on the feature-2 branch with the required commit message.
+
+QUESTION:
+What are all the commits you’ve made on the feature-2 branch?
+
+Answer:
+5e476d4 satisfying requirement change two
+
+
+STEP K:
+
+Commands:
+git checkout feature-3
+nano hmk1/Main.java
+javac hmk1/Main.java
+java -cp hmk1 Main
+
+Program Output:
+3 8
+4
+6
+
+git add hmk1/Main.java
+git commit -m "satisfying requirement change three"
+git push origin feature-3
+
+Explanation:
+The program was modified on feature-3 to print only the even numbers in the range.
+
+
+STEP L:
+
+Commands:
+git checkout main
+git merge feature-2
+git push origin main
+
+Result:
+main now reflects the functionality from feature-2 (odd numbers).
+
+
+
